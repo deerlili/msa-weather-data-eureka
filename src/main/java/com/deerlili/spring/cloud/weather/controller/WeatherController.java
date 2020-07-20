@@ -18,10 +18,10 @@ public class WeatherController {
     @Autowired
     private WeatherDataService weatherDataService;
 
-    @GetMapping("/cityid/{cityid}")
+    @GetMapping("/cityId/{cityId}")
     @ApiOperation(value = "根据城市id获取", notes = "根据城市id获取")
-    public WeatherResponse getWeatherByCityId(@PathVariable("cityid") String cityid) {
-        return weatherDataService.getDataByCityId(cityid);
+    public WeatherResponse getWeatherByCityId(@PathVariable("cityId") String cityId) {
+        return weatherDataService.getDataByCityId(cityId);
     }
 
     @GetMapping("/cityName/{cityName}")
